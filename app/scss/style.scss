@@ -28,6 +28,55 @@ body {
   justify-content: flex-end;
 }
 
+.display {
+  color: white;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+
+  .input {
+    color: #7d7d9d;
+    display: flex;
+    font-size: 1rem;
+    transition: all 150ms ease;
+
+    img {
+      filter: invert(57%) sepia(8%) saturate(1197%) hue-rotate(202deg)
+        brightness(87%) contrast(85%);
+      width: 1rem;
+      height: 1rem;
+      transform: translateY(10%);
+    }
+  }
+
+  .input.bottom {
+    color: white;
+    font-size: 2rem;
+
+    img {
+      filter: none;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .output {
+    font-size: 1rem;
+    height: 0;
+    color: #7d7d9d;
+    transition: all 300ms ease;
+  }
+
+  .output.has_content {
+    color: white;
+    height: 1.1875rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .controls {
   width: 100%;
   height: 78%;
@@ -41,7 +90,7 @@ body {
   grid-template-rows: repeat(5, 1fr);
 }
 
-.btn {
+.calc-btn {
   width: 3rem;
   height: 3rem;
   display: grid;
@@ -51,6 +100,8 @@ body {
   font-size: 25px;
   cursor: pointer;
   position: relative;
+
+  user-select: none;
 
   img {
     width: 50%;
@@ -93,6 +144,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  .calc-btn {
+    width: 100%;
+  }
 }
 
 .side-controls {
