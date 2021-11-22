@@ -6,7 +6,7 @@ let operators = ["div", "mul", "sub", "add"];
 let values = [];
 
 // Function to easily create the img tags
-const imgTag = operator => `<img src="/img/${operator}.svg">`
+const imgTag = operator => `<img src="Calculator/img/${operator}.svg">`
 
 // Function used to push VALUE array items into the input
 const pushToInput = arr => {
